@@ -9,14 +9,13 @@ def main():
     print("⚙️ Preprocessing data...")
     X_train, X_test, y_train, y_test = preprocess(train, test)
 
-    # Take one sample from test data
-    sample = X_test.iloc[0].values
+    # Get the first test sample
+    sample = X_test[0]
 
     print("🔍 Running detection...")
     result = predict(sample)
 
     alert(result)
-
 
 if __name__ == "__main__":
     main()
